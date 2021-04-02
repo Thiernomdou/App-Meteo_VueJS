@@ -70,9 +70,11 @@ export default {
 <style scoped>
 
 .texte-affichage {
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 1.2;
 }
+
+
 
 </style>
