@@ -5,7 +5,7 @@
         <h1 class="my-4 text-center">Application Météo</h1>
 
         <div class="form-group mb-5">
-            <label for="position"><b>Entrez le Nom de votre Ville</b></label>
+            <label for="position">Entrez le Nom de votre Ville</label>
             <input 
             type="text" 
             id="position" 
@@ -15,12 +15,12 @@
         </div>
 
         <div class="w-75 m-auto" v-if="temps">
-            
+            <h3 class="text-center mb-4 ma-pos">Position : {{ temps.name }}</h3>
             <div class="card text-center p-5 ma-card">
                 <!-- toFixed() permet d'arrondir la température-->
-                <p class="texte-affichage">{{ temps.name }}</p>
-                <p class="texte-affichage">{{ temps.main.temp.toFixed() }}°</p>
-                <p class="texte-affichage">{{ temps.weather[0].description }}</p>
+                <p class="texte-affichage">Position :  {{ temps.name }} </p>
+                <p class="texte-affichage">Température : {{ temps.main.temp.toFixed() }}°</p>
+                <p class="texte-affichage">Temps : {{ temps.weather[0].description }}</p>
             </div>
         </div>
 
@@ -71,15 +71,22 @@ export default {
 <style scoped>
 
 .texte-affichage {
-    font-size: 50px;
+    font-size: 26px;
     font-weight: 500;
     line-height: 1.5;
+    font-family: 'Kaushan Script';
 }
 .ma-card {
-    background: transparent;
-    border: none;
-}
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+.ma-pos {
+    background: #1FA2FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 
 
