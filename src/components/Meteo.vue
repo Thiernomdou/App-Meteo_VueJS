@@ -15,7 +15,7 @@
         </div>
 
         <div class="w-75 m-auto" v-if="temps">
-            <h3 class="text-center mb-4 ma-pos">Position : {{ temps.name }}</h3>
+            
             <div class="card text-center p-5 ma-card">
                 <!-- toFixed() permet d'arrondir la température-->
                 <p class="texte-affichage">Position :  {{ temps.name }} </p>
